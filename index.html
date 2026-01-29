@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGENT AI | Water Resources Engineering</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --neon-cyan: #00f3ff;
+            --deep-space: #020617;
+            --glass: rgba(15, 23, 42, 0.7);
+        }
+        body {
+            background-color: var(--deep-space);
+            color: #cbd5e1;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .neon-glow {
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.6);
+            color: var(--neon-cyan);
+        }
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 243, 255, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+        }
+        .scan-line {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
+            position: absolute;
+            animation: scan 4s linear infinite;
+        }
+        @keyframes scan {
+            0% { top: 0%; }
+            100% { top: 100%; }
+        }
+        .sidebar-item:hover {
+            background: rgba(0, 243, 255, 0.1);
+            border-left: 3px solid var(--neon-cyan);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <nav class="glass-card m-4 p-4 rounded-2xl flex justify-between items-center sticky top-0 z-50">
+        <div class="flex items-center space-x-4">
+            <div class="p-2 bg-cyan-500/20 rounded-lg">
+                <i class="fas fa-microchip neon-glow text-2xl"></i>
+            </div>
+            <div>
+                <h1 class="font-bold tracking-widest text-lg uppercase neon-glow">Agent AI</h1>
+                <p class="text-[10px] text-gray-500 uppercase tracking-tighter">Water Resources & FFWS Platform [cite: 8]</p>
+            </div>
+        </div>
+        
+        <div class="hidden md:flex space-x-8 text-xs font-medium uppercase tracking-widest">
+            <span class="flex items-center gap-2"><i class="fas fa-circle text-[8px] text-green-500 animate-pulse"></i> Telemetry Active [cite: 29]</span>
+            <span class="text-gray-500"><i class="fas fa-server"></i> BBWS Distributed [cite: 174]</span>
+            <span class="text-cyan-400 border border-cyan-500/30 px-2 py-1 rounded">2026-JAN-29</span>
+        </div>
+    </nav>
+
+    <div class="flex flex-1 px-4 pb-4 gap-4 overflow-hidden">
+        
+        <aside class="w-1/4 flex flex-col gap-4">
+            <section class="glass-card p-4 rounded-2xl flex-1 overflow-y-auto">
+                <h2 class="text-xs font-bold text-cyan-500 mb-4 border-b border-cyan-900 pb-2 uppercase"><i class="fas fa-sliders-h mr-2"></i> System Setting</h2>
+                <div class="space-y-1">
+                    <div class="sidebar-item p-2 rounded cursor-pointer text-sm">1. Security Protocol [cite: 2]</div>
+                    <div class="sidebar-item p-2 rounded cursor-pointer text-sm">3. Telemetry Grid [cite: 4]</div>
+                    <div class="sidebar-item p-2 rounded cursor-pointer text-sm">4. Infra Control (P2B) [cite: 5, 94]</div>
+                    <div class="sidebar-item p-2 rounded cursor-pointer text-sm opacity-50 italic text-xs">9. AI Trigger Setup [cite: 15]</div>
+                </div>
+
+                <h2 class="text-xs font-bold text-cyan-500 mt-6 mb-4 border-b border-cyan-900 pb-2 uppercase"><i class="fas fa-project-diagram mr-2"></i> Hydro-Models [cite: 58, 86]</h2>
+                <div class="grid grid-cols-2 gap-2">
+                    <button class="p-2 glass-card text-[10px] hover:bg-cyan-500/20 transition">MIKE (DHI) [cite: 56]</button>
+                    <button class="p-2 glass-card text-[10px] hover:bg-cyan-500/20 transition">HEC-RAS (USACE) [cite: 60]</button>
+                    <button class="p-2 glass-card text-[10px] hover:bg-cyan-500/20 transition">SWMM (USEPA) [cite: 62]</button>
+                    <button class="p-2 glass-card text-[10px] hover:bg-cyan-500/20 transition">WFLOW (Deltares) [cite: 61]</button>
+                </div>
+            </section>
+        </aside>
+
+        <main class="flex-1 flex flex-col gap-4">
+            <div class="glass-card rounded-2xl relative overflow-hidden flex-1 group">
+                <div class="scan-line"></div>
+                <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#00f3ff_1px,transparent_1px)] [background-size:20px_20px]"></div>
+                
+                <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+                    <div class="p-8 border-2 border-dashed border-cyan-500/20 rounded-full animate-[spin_20s_linear_infinite]">
+                        <i class="fas fa-satellite text-6xl text-cyan-500/30"></i>
+                    </div>
+                    <h3 class="mt-6 text-2xl font-light tracking-[0.5em] uppercase text-gray-500">Digital Twin Active</h3>
+                    <p class="text-xs text-cyan-400 mt-2">Monitoring: Surakarta Urban Catchment [cite: 148]</p>
+                </div>
+
+                <div class="absolute top-4 left-4 flex flex-col gap-2">
+                    <div class="glass-card p-3 rounded-xl border-l-2 border-cyan-400">
+                        <p class="text-[10px] uppercase text-cyan-500">River Stage</p>
+                        <p class="text-xl font-mono text-white">4.82 <span class="text-xs">m</span></p>
+                    </div>
+                    <div class="glass-card p-3 rounded-xl border-l-2 border-yellow-500">
+                        <p class="text-[10px] uppercase text-yellow-500">Status Trigger [cite: 15]</p>
+                        <p class="text-xs font-mono text-white">WASPADA (Level II)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card p-4 h-48 rounded-2xl">
+                <div class="flex justify-between items-center mb-2">
+                    <h2 class="text-xs font-bold text-cyan-500 uppercase"><i class="fas fa-terminal mr-2"></i> Agent AI Processing Log</h2>
+                    <span class="text-[10px] text-gray-500 uppercase">QA/QC Calibration [cite: 24]</span>
+                </div>
+                <div class="font-mono text-[11px] text-green-400 space-y-1 overflow-y-auto h-32 scrollbar-hide">
+                    <p>> [SYSTEM] Ingesting Telemetry Data (ID: SURA-01)...</p>
+                    <p>> [AI] Validating with Satellite Rainfall Data (GPM-IMERG)...</p>
+                    <p>> [MODEL] Running Ensemble Prediction (HEC-RAS 2D)...</p>
+                    <p>> [AGENT] Optimal gate operation calculated for Pintu Gandean.</p>
+                    <p class="text-yellow-400">> [NOTIF] Disseminating alert to Emergency Response Team[cite: 31].</p>
+                </div>
+            </div>
+        </main>
+
+        <aside class="w-1/4 flex flex-col gap-4">
+            <section class="glass-card p-4 rounded-2xl flex-1">
+                <h2 class="text-xs font-bold text-cyan-500 mb-4 border-b border-cyan-900 pb-2 uppercase"><i class="fas fa-chart-area mr-2"></i> Stats (Min-Max) [cite: 25, 114]</h2>
+                <div class="space-y-4">
+                    <div class="bg-black/40 p-2 rounded">
+                        <p class="text-[10px] text-gray-500 mb-1">Max Daily Rainfall</p>
+                        <div class="w-full bg-gray-800 h-1 rounded-full overflow-hidden">
+                            <div class="bg-cyan-500 h-full w-[65%]"></div>
+                        </div>
+                        <p class="text-right text-[10px] mt-1">112.4 mm/day</p>
+                    </div>
+                </div>
+
+                <h2 class="text-xs font-bold text-yellow-500 mt-6 mb-4 border-b border-yellow-900/50 pb-2 uppercase"><i class="fas fa-bullhorn mr-2"></i> Dissemination [cite: 33, 36]</h2>
+                <div class="space-y-2">
+                    <div class="flex items-center justify-between text-[10px] p-2 bg-white/5 rounded">
+                        <span>Masyarakat (Public) [cite: 79]</span>
+                        <span class="text-green-500"><i class="fas fa-check-circle"></i> Sent</span>
+                    </div>
+                    <div class="flex items-center justify-between text-[10px] p-2 bg-white/5 rounded">
+                        <span>Pejabat (Executive) [cite: 77]</span>
+                        <span class="text-cyan-500"><i class="fas fa-clock"></i> Scheduled</span>
+                    </div>
+                    <div class="flex items-center justify-between text-[10px] p-2 bg-white/5 rounded">
+                        <span>LSM / Institusi [cite: 235]</span>
+                        <span class="text-gray-500 italic text-[8px]">Awaiting Confirmation</span>
+                    </div>
+                </div>
+            </section>
+        </aside>
+    </div>
+
+</body>
+</html>
