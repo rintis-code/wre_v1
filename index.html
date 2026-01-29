@@ -3,161 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AGENT AI | Water Resources Engineering</title>
+    <title>aqua_v1 - Indonesia Sustainable Water Management</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root {
-            --neon-cyan: #00f3ff;
-            --deep-space: #020617;
-            --glass: rgba(15, 23, 42, 0.7);
-        }
         body {
-            background-color: var(--deep-space);
-            color: #cbd5e1;
+            background-color: #f0f4f8;
             font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
         }
-        .neon-glow {
-            text-shadow: 0 0 10px rgba(0, 243, 255, 0.6);
-            color: var(--neon-cyan);
+        .national-header {
+            background: linear-gradient(135deg, #064e3b 0%, #065f46 100%);
+            border-bottom: 4px solid #fbbf24;
         }
         .glass-card {
-            background: var(--glass);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(0, 243, 255, 0.15);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(5px);
+            transition: transform 0.2s;
         }
-        .scan-line {
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
-            position: absolute;
-            animation: scan 4s linear infinite;
-        }
-        @keyframes scan {
-            0% { top: 0%; }
-            100% { top: 100%; }
-        }
-        .sidebar-item:hover {
-            background: rgba(0, 243, 255, 0.1);
-            border-left: 3px solid var(--neon-cyan);
-        }
+        .glass-card:hover { transform: translateY(-2px); }
+        .swm-pencil-node { border-left: 5px solid #3b82f6; }
+        .problem-node { border-left: 5px solid #ef4444; }
     </style>
 </head>
-<body class="min-h-screen flex flex-col">
+<body class="p-4 md:p-10">
 
-    <nav class="glass-card m-4 p-4 rounded-2xl flex justify-between items-center sticky top-0 z-50">
-        <div class="flex items-center space-x-4">
-            <div class="p-2 bg-cyan-500/20 rounded-lg">
-                <i class="fas fa-microchip neon-glow text-2xl"></i>
-            </div>
-            <div>
-                <h1 class="font-bold tracking-widest text-lg uppercase neon-glow">Agent AI</h1>
-                <p class="text-[10px] text-gray-500 uppercase tracking-tighter">Water Resources & FFWS Platform [cite: 8]</p>
+    <header class="national-header text-white p-6 rounded-xl shadow-2xl mb-10 relative overflow-hidden">
+        <div class="relative z-10">
+            <h1 class="text-2xl md:text-3xl font-extrabold tracking-tighter uppercase italic">
+                DIGITAL – SPASIAL – REAL-TIME – KOLABORATIF
+            </h1>
+            <p class="text-lg text-yellow-400 font-semibold uppercase tracking-widest mt-1">
+                Indonesia: Cerdas, Adil, Efisien, Berkelanjutan
+            </p>
+        </div>
+        <div class="absolute top-0 right-0 p-4 opacity-20">
+            <svg width="100" height="100" viewBox="0 0 100 100">
+                <path d="M10,50 Q30,10 50,50 T90,50" fill="none" stroke="white" stroke-width="2" />
+            </svg>
+        </div>
+    </header>
+
+    <main class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <div class="lg:col-span-7 space-y-6">
+            <h2 class="text-xl font-bold text-emerald-900 flex items-center bg-emerald-100 p-3 rounded-lg">
+                <i class="fas fa-check-circle mr-2 text-emerald-600"></i> KONSEP PENGELOLAAN SDA IDEAL
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="glass-card p-4 rounded-lg shadow swm-pencil-node">
+                    <span class="text-xs font-bold text-blue-600 uppercase">01. Teknologi Digital</span>
+                    <p class="text-sm text-gray-700 mt-1">Teknologi digital terkini yang interoperable dan terstandardisasi.</p>
+                </div>
+                <div class="glass-card p-4 rounded-lg shadow swm-pencil-node">
+                    <span class="text-xs font-bold text-blue-600 uppercase">02. Sistem Informasi Spasial</span>
+                    <p class="text-sm text-gray-700 mt-1">Integrasi data-informasi SDA berbasis spasial untuk akurasi lebih baik.</p>
+                </div>
+                <div class="glass-card p-4 rounded-lg shadow swm-pencil-node">
+                    <span class="text-xs font-bold text-blue-600 uppercase">03. Sensor Pemantauan Real-time</span>
+                    <p class="text-sm text-gray-700 mt-1">Data dan informasi langsung dan terkini untuk pengambilan keputusan.</p>
+                </div>
+                <div class="glass-card p-4 rounded-lg shadow swm-pencil-node">
+                    <span class="text-xs font-bold text-blue-600 uppercase">04. Berbagi Data – Kolaboratif</span>
+                    <p class="text-sm text-gray-700 mt-1">Berbagi data lintas sektor untuk efisiensi pengelolaan SDA nasional.</p>
+                </div>
+                <div class="glass-card p-4 rounded-lg shadow swm-pencil-node">
+                    <span class="text-xs font-bold text-blue-600 uppercase">05. Analisis – Perencanaan</span>
+                    <p class="text-sm text-gray-700 mt-1">Pemanfaatan <strong>Digital Twin</strong> untuk perencanaan strategis nasional.</p>
+                </div>
+                <div class="glass-card p-4 rounded-lg shadow swm-pencil-node">
+                    <span class="text-xs font-bold text-blue-600 uppercase">06. Operasi</span>
+                    <p class="text-sm text-gray-700 mt-1">Meningkatkan efisiensi operasional dalam pengelolaan SDA Indonesia.</p>
+                </div>
+                <div class="glass-card md:col-span-2 p-4 rounded-lg shadow swm-pencil-node border-blue-600 bg-blue-50">
+                    <span class="text-xs font-bold text-blue-800 uppercase">07. Pengambilan Keputusan</span>
+                    <p class="text-sm text-gray-800 mt-1">Mewujudkan keputusan efektif, efisien, adil, dan berkelanjutan berbasis bukti.</p>
+                </div>
             </div>
         </div>
-        
-        <div class="hidden md:flex space-x-8 text-xs font-medium uppercase tracking-widest">
-            <span class="flex items-center gap-2"><i class="fas fa-circle text-[8px] text-green-500 animate-pulse"></i> Telemetry Active [cite: 29]</span>
-            <span class="text-gray-500"><i class="fas fa-server"></i> BBWS Distributed [cite: 174]</span>
-            <span class="text-cyan-400 border border-cyan-500/30 px-2 py-1 rounded">2026-JAN-29</span>
+
+        <div class="lg:col-span-5 space-y-6">
+            <h2 class="text-xl font-bold text-rose-900 flex items-center bg-rose-100 p-3 rounded-lg">
+                <i class="fas fa-exclamation-triangle mr-2 text-rose-600"></i> PERMASALAHAN PENERAPAN SWM
+            </h2>
+
+            <div class="space-y-3">
+                <div class="bg-white p-4 rounded shadow-sm problem-node">
+                    <h4 class="text-sm font-bold text-rose-700 uppercase">Infrastruktur Digital Terbatas</h4>
+                    <p class="text-xs text-gray-500">Akuisisi data real-time terhambat secara nasional.</p>
+                </div>
+                <div class="bg-white p-4 rounded shadow-sm problem-node">
+                    <h4 class="text-sm font-bold text-rose-700 uppercase">Data dan Informasi Terfragmentasi</h4>
+                    <p class="text-xs text-gray-500">Silo data menghambat efisiensi informasi SDA.</p>
+                </div>
+                <div class="bg-white p-4 rounded shadow-sm problem-node">
+                    <h4 class="text-sm font-bold text-rose-700 uppercase">Data Spasial Tidak Konsisten</h4>
+                    <p class="text-xs text-gray-500">Integrasi dan analisis sulit dilakukan antar wilayah.</p>
+                </div>
+                <div class="bg-white p-4 rounded shadow-sm problem-node">
+                    <h4 class="text-sm font-bold text-rose-700 uppercase">Tata Kelola Kolaboratif Lemah</h4>
+                    <p class="text-xs text-gray-500">Pendekatan manajemen holistik belum maksimal.</p>
+                </div>
+                <div class="bg-white p-4 rounded shadow-sm problem-node">
+                    <h4 class="text-sm font-bold text-rose-700 uppercase">SDM Terbatas</h4>
+                    <p class="text-xs text-gray-500">Hambatan pada adopsi teknologi dan literasi digital.</p>
+                </div>
+                <div class="bg-white p-4 rounded shadow-sm problem-node">
+                    <h4 class="text-sm font-bold text-rose-700 uppercase">Model Pendanaan Tidak Aman</h4>
+                    <p class="text-xs text-gray-500">Operasional sistem jangka panjang tidak berkelanjutan.</p>
+                </div>
+            </div>
+
+            <div class="bg-gray-900 text-white p-6 rounded-2xl shadow-xl mt-6">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="text-[10px] font-mono text-emerald-400">NATIONAL_GAP_ANALYSIS</span>
+                    <span class="text-[10px] font-mono text-gray-500">AQUA_V1_PROTOTYPE</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="text-3xl font-bold">40%</div>
+                    <div class="flex-1 bg-gray-700 h-2 rounded-full overflow-hidden">
+                        <div class="bg-emerald-500 h-full w-[40%]"></div>
+                    </div>
+                </div>
+                <p class="text-[9px] mt-4 text-gray-400 italic">Target: Menuju Pengelolaan SDA Indonesia yang Berkelanjutan.</p>
+            </div>
         </div>
-    </nav>
+    </main>
 
-    <div class="flex flex-1 px-4 pb-4 gap-4 overflow-hidden">
-        
-        <aside class="w-1/4 flex flex-col gap-4">
-            <section class="glass-card p-4 rounded-2xl flex-1 overflow-y-auto">
-                <h2 class="text-xs font-bold text-cyan-500 mb-4 border-b border-cyan-900 pb-2 uppercase"><i class="fas fa-sliders-h mr-2"></i> System Setting</h2>
-                <div class="space-y-1">
-                    <div class="sidebar-item p-2 rounded cursor-pointer text-sm">1. Security Protocol [cite: 2]</div>
-                    <div class="sidebar-item p-2 rounded cursor-pointer text-sm">3. Telemetry Grid [cite: 4]</div>
-                    <div class="sidebar-item p-2 rounded cursor-pointer text-sm">4. Infra Control (P2B) [cite: 5, 94]</div>
-                    <div class="sidebar-item p-2 rounded cursor-pointer text-sm opacity-50 italic text-xs">9. AI Trigger Setup [cite: 15]</div>
-                </div>
-
-                <h2 class="text-xs font-bold text-cyan-500 mt-6 mb-4 border-b border-cyan-900 pb-2 uppercase"><i class="fas fa-project-diagram mr-2"></i> Hydro-Models [cite: 58, 86]</h2>
-                <div class="grid grid-cols-2 gap-2">
-                    <button class="p-2 glass-card text-[10px] hover:bg-cyan-500/20 transition">MIKE (DHI) [cite: 56]</button>
-                    <button class="p-2 glass-card text-[10px] hover:bg-cyan-500/20 transition">HEC-RAS (USACE) [cite: 60]</button>
-                    <button class="p-2 glass-card text-[10px] hover:bg-cyan-500/20 transition">SWMM (USEPA) [cite: 62]</button>
-                    <button class="p-2 glass-card text-[10px] hover:bg-cyan-500/20 transition">WFLOW (Deltares) [cite: 61]</button>
-                </div>
-            </section>
-        </aside>
-
-        <main class="flex-1 flex flex-col gap-4">
-            <div class="glass-card rounded-2xl relative overflow-hidden flex-1 group">
-                <div class="scan-line"></div>
-                <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#00f3ff_1px,transparent_1px)] [background-size:20px_20px]"></div>
-                
-                <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-                    <div class="p-8 border-2 border-dashed border-cyan-500/20 rounded-full animate-[spin_20s_linear_infinite]">
-                        <i class="fas fa-satellite text-6xl text-cyan-500/30"></i>
-                    </div>
-                    <h3 class="mt-6 text-2xl font-light tracking-[0.5em] uppercase text-gray-500">Digital Twin Active</h3>
-                    <p class="text-xs text-cyan-400 mt-2">Monitoring: Surakarta Urban Catchment [cite: 148]</p>
-                </div>
-
-                <div class="absolute top-4 left-4 flex flex-col gap-2">
-                    <div class="glass-card p-3 rounded-xl border-l-2 border-cyan-400">
-                        <p class="text-[10px] uppercase text-cyan-500">River Stage</p>
-                        <p class="text-xl font-mono text-white">4.82 <span class="text-xs">m</span></p>
-                    </div>
-                    <div class="glass-card p-3 rounded-xl border-l-2 border-yellow-500">
-                        <p class="text-[10px] uppercase text-yellow-500">Status Trigger [cite: 15]</p>
-                        <p class="text-xs font-mono text-white">WASPADA (Level II)</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="glass-card p-4 h-48 rounded-2xl">
-                <div class="flex justify-between items-center mb-2">
-                    <h2 class="text-xs font-bold text-cyan-500 uppercase"><i class="fas fa-terminal mr-2"></i> Agent AI Processing Log</h2>
-                    <span class="text-[10px] text-gray-500 uppercase">QA/QC Calibration [cite: 24]</span>
-                </div>
-                <div class="font-mono text-[11px] text-green-400 space-y-1 overflow-y-auto h-32 scrollbar-hide">
-                    <p>> [SYSTEM] Ingesting Telemetry Data (ID: SURA-01)...</p>
-                    <p>> [AI] Validating with Satellite Rainfall Data (GPM-IMERG)...</p>
-                    <p>> [MODEL] Running Ensemble Prediction (HEC-RAS 2D)...</p>
-                    <p>> [AGENT] Optimal gate operation calculated for Pintu Gandean.</p>
-                    <p class="text-yellow-400">> [NOTIF] Disseminating alert to Emergency Response Team[cite: 31].</p>
-                </div>
-            </div>
-        </main>
-
-        <aside class="w-1/4 flex flex-col gap-4">
-            <section class="glass-card p-4 rounded-2xl flex-1">
-                <h2 class="text-xs font-bold text-cyan-500 mb-4 border-b border-cyan-900 pb-2 uppercase"><i class="fas fa-chart-area mr-2"></i> Stats (Min-Max) [cite: 25, 114]</h2>
-                <div class="space-y-4">
-                    <div class="bg-black/40 p-2 rounded">
-                        <p class="text-[10px] text-gray-500 mb-1">Max Daily Rainfall</p>
-                        <div class="w-full bg-gray-800 h-1 rounded-full overflow-hidden">
-                            <div class="bg-cyan-500 h-full w-[65%]"></div>
-                        </div>
-                        <p class="text-right text-[10px] mt-1">112.4 mm/day</p>
-                    </div>
-                </div>
-
-                <h2 class="text-xs font-bold text-yellow-500 mt-6 mb-4 border-b border-yellow-900/50 pb-2 uppercase"><i class="fas fa-bullhorn mr-2"></i> Dissemination [cite: 33, 36]</h2>
-                <div class="space-y-2">
-                    <div class="flex items-center justify-between text-[10px] p-2 bg-white/5 rounded">
-                        <span>Masyarakat (Public) [cite: 79]</span>
-                        <span class="text-green-500"><i class="fas fa-check-circle"></i> Sent</span>
-                    </div>
-                    <div class="flex items-center justify-between text-[10px] p-2 bg-white/5 rounded">
-                        <span>Pejabat (Executive) [cite: 77]</span>
-                        <span class="text-cyan-500"><i class="fas fa-clock"></i> Scheduled</span>
-                    </div>
-                    <div class="flex items-center justify-between text-[10px] p-2 bg-white/5 rounded">
-                        <span>LSM / Institusi [cite: 235]</span>
-                        <span class="text-gray-500 italic text-[8px]">Awaiting Confirmation</span>
-                    </div>
-                </div>
-            </section>
-        </aside>
-    </div>
+    <footer class="mt-12 pt-6 border-t border-gray-300 text-center">
+        <p class="text-gray-600 font-bold uppercase tracking-widest text-sm">AQUA_V1</p>
+        <p class="text-gray-400 text-[10px] mt-1 italic">Sesuai Kerangka Kerja Smart Water Management Indonesia</p>
+    </footer>
 
 </body>
 </html>
